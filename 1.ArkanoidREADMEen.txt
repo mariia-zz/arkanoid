@@ -1,0 +1,23 @@
+Arkanoid is a block breaker arcade game.
+
+The player controls the "Vaus", a space vessel that acts as the game's "paddle" which prevents a ball from falling from the playing field, and attempts to bounce the ball against a number of bricks. The ball striking a brick causes the brick to disappear. When all the bricks are gone, the player advances to the next level, where another pattern of bricks appears. There are game variations (bricks that have to be hit multiple times, flying enemy ships, etc.) and power-up capsules to enhance the Vaus (expand the Vaus, multiply the number of balls, equip a laser cannon, break directly to the next level, etc.), but the gameplay remains the same.
+
+The main classes in the game Arkanoid:
+- Arkanoid - the class in which the main actions take place. Also, our program entry point, the main method, is in this class;
+- Ball;
+- Brick - "bricks" that the player knocks down with a ball;
+- Stand - flying stand;
+- Canvas - is responsible for drawing objects as a two-dimensional array.
+
+Ball, Stand, Brick inherit from BaseObject.
+When calculating the interaction, we assume that all our objects are round.
+The boolean isIntersec (BaseObject o) method determines if the Ball hit the Brick or Stand;
+
+Ball has: speed, direction, dx (the x distance that the ball travels in one step.calculated based on the speed and direction), dy (the y distance that the ball travels in one step.calculated based on the speed and direction, isFrozen 
+
+Stand has: speed, direction.
+
+The checkBricksBump method checks if Sfrik has collided with any of the bricks.
+If faced:
+1) the ball flies off in a random direction;
+2) the brick is removed from the list.
